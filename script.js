@@ -20,11 +20,12 @@ $('body').on('keyup', '.shownInput', function (ev) {
   if (ev.keyCode === 190) {
     stableVal = stableVal + '.';
     this.value = val + domainList[arrayIteration];
-    setCursorPosition("myBox", this.value.length - domainList[arrayIteration].length)
+    setCursorPosition("myBox", this.value.length - domainList[arrayIteration].length);
     cycleArrayIteration(arrayIteration);
   }
   if (ev.keyCode === 16) {
     this.value = stableVal + domainList[arrayIteration];
+    setCursorPosition("myBox", this.value.length - domainList[arrayIteration].length);
     cycleArrayIteration(arrayIteration);
   }
 });
